@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 //Service
-import { ApiService, GlobalService } from 'service';
+import { ApiService,AuthGuard, GlobalService } from 'service';
 //Common Component
 import { AppComponent } from './app.component';
 import { FooterComponent } from './_footer/footer.component';
@@ -32,7 +32,7 @@ import { classifyGameListPipe } from './app.pipes';
         HeaderComponent, NavComponent, GameTableComponent
     ],
     providers: [
-        ApiService, GlobalService
+        ApiService,AuthGuard, GlobalService
     ],
 })
 export class AppModule {}

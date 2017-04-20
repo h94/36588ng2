@@ -9,7 +9,7 @@ export class GlobalService {
     /**
 	 * 是否顯示login頁面 ，default value=true
 	 */
-	private showLogin : boolean = true;
+	private showLogin : boolean = false;
     constructor(private router: Router) {}
 
     /**

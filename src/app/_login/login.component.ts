@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService, ApiService } from 'service';
+import { Router } from '@angular/router';
 @Component({
     selector: 'login',
     templateUrl: 'login.component.html'
@@ -20,7 +21,7 @@ export class LoginComponent implements OnInit {
     public password: string = '';
     public isRemember: boolean = false;
 
-    constructor(private globals: GlobalService, private api: ApiService) { }
+    constructor(private globals: GlobalService, private api: ApiService,private router: Router) { }
 
     login() {
 
@@ -28,15 +29,32 @@ export class LoginComponent implements OnInit {
         this.api.postServer(999,Send).subscribe(res => {
             let data = res.ret[1];
             if(data){
+                if (this.isRemember) {
+                    localStorage.setItem('username', this.username);
+                    localStorage.setItem('password', this.password);
+                } else {
+                    localStorage.removeItem('username');
+                    localStorage.removeItem('password');
+                }
                 sessionStorage.setItem('uid', data);
-                this.globals.setShowLogin(false);
+                this.globals.setShowLogin(true);
+                location.reload();
             }
             console.log(res);
         })
 
     }
      ngOnInit() {
-
+        if(sessionStorage.getItem('uid')){
+            this.router.navigate(['GameTable']);
+        }
+        if (localStorage.getItem('username') && localStorage.getItem('password')) {
+            this.username=localStorage.getItem('username');
+            this.password=localStorage.getItem('password');
+        } else {
+            this.username='';
+            this.password='';
+        }
     }
   
 }

@@ -1,19 +1,19 @@
-<div>
+<div class="login_bg">
     <form class="login_form" (ngSubmit)='login()'>
         <div class="login_info">
             <div class="mem_account">
-                <label>帳號 :</label>
+                <label class="input_text">帳號 :</label>
                 <input class="mem_input" type="text" placeholder="帳號" [(ngModel)]="username" name="username">
             </div>
             <div class="mem_password">
-                <label>密碼 :</label>
+                <label class="input_text">密碼 :</label>
                 <input class="mem_input pw" type="password" placeholder="密碼" [(ngModel)]="password" name="password">
             </div>
         </div>
         <div class="logout_btn">
             <div class="remember_pw">
-                <input type="checkbox" id="test1" [(ngModel)]="isRemember" (change)="changeIsRemember()" name="isRemember" />
-                <label for="test1">記住密碼</label>
+                <input type="checkbox" id="test1" [(ngModel)]="isRemember" name="isRemember" />
+                <label for="test1" class="input_text">記住密碼</label>
             </div>
             <button type="submit" class="btn_login">登入</button>
         </div>

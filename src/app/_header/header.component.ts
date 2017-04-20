@@ -12,8 +12,14 @@ import { Observable } from 'rxjs';
 export class HeaderComponent implements OnInit {
 
     
-    constructor() { }
+    constructor(private globals: GlobalService, private api: ApiService) { }
 
+    logout(){
+        this.globals.setShowLogin(false);
+        sessionStorage.clear();
+        location.reload();
+
+    }
     ngOnInit() {
     
 

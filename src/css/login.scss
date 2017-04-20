@@ -1,8 +1,54 @@
- body {
-     font-family: monospace, Arial, Helvetica, sans-serif, 微軟正黑體;
-     background-color: rgb(200, 208, 216);
-     min-width: 1270px;
-     .login_bg {
-         background: #191b25;
-     }
- }
+$text_color-yellow:#ff0;
+blockquote,
+body,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+input,
+li,
+ol,
+p,
+pre,
+td,
+textarea,
+th,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace, Arial, Helvetica, sans-serif, 微軟正黑體;
+    background-color: rgb(200, 208, 216);
+    min-width: 1270px;
+    min-height: 960px;
+    height: 100%;
+    position: relative;
+    display: block;
+    .login_bg {
+        background: #191b25;
+        margin: 0;
+        width: 100%;
+        min-height: 100%;
+        background: url(../img/web_bg01.jpg) center top no-repeat #5e5e5e;
+        position: absolute;
+        background-size: cover;
+        .login_form {
+            margin: 430px 0 0 40%;
+        }
+    }
+}
+
+.input_text {
+    color: $text_color-yellow;
+}
