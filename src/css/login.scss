@@ -1,16 +1,8 @@
-$padding: 6px;
-nav {
-    ul {
-        margin: 0;
-        padding: $padding;
-        list-style: none;
-    }
-    li {
-        display: inline-block;
-    }
-    a {
-        display: block;
-        padding: $padding 12px;
-        text-decoration: none;
-    }
-}
+ body {
+     font-family: monospace, Arial, Helvetica, sans-serif, 微軟正黑體;
+     background-color: rgb(200, 208, 216);
+     min-width: 1270px;
+     .login_bg {
+         background: #191b25;
+     }
+ }
