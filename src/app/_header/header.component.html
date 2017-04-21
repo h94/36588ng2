@@ -1,4 +1,16 @@
 <header>
-    head
-    <button class="btn_logout" (click)="logout()">登出</button>
+    <div class="logo">
+        <div class="time">{{nowTime}}</div>
+        logo
+    </div>
+    <div class="link_Bn_center">
+        link Button center
+        <button class="link_Button" (click)="changePage(['betdetail'])">下注明細</button>
+        <button class="link_Button" (click)="changePage(['bethistory'])">歷史帳務</button>
+        <button class="link_Button" (click)="changePage(['systemreated'])">系統相關</button>
+        <button class="link_Button" (click)="changePage(['member'])">會員相關</button>
+    </div>
+    <div class="link_Bn_right">
+        link Button right
+    </div>
 </header>

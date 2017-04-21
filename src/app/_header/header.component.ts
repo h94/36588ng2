@@ -11,17 +11,17 @@ import { Observable } from 'rxjs';
  */
 export class HeaderComponent implements OnInit {
 
-    
+        /**
+     * 現在時間
+     */
+    public nowTime : string = "";
     constructor(private globals: GlobalService, private api: ApiService) { }
-
-    logout(){
-        this.globals.setShowLogin(false);
-        sessionStorage.clear();
-        location.reload();
-
-    }
+    changePage(name: string[]) {
+        this.globals.goPage(name);
+	}
     ngOnInit() {
-    
+        this.nowTime = new Date().toString();
+     Observable.interval(1000).subscribe( () => this.nowTime = new Date().toString() );
 
     }
  

@@ -1,4 +1,40 @@
 @charset "UTF-8";
+header {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 13px;
+  min-height: 93px;
+  background: #4aabf5;
+  display: flex; }
+  header .logo {
+    width: 25%;
+    background: #4000f5; }
+    header .logo .time {
+      color: #ffffff; }
+  header .link_Bn_center {
+    width: 50%;
+    background: #5260f5; }
+    header .link_Bn_center .link_Button {
+      background-color: #5260f5;
+      color: black;
+      border: 2px solid #f44336;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      cursor: pointer; }
+      header .link_Bn_center .link_Button:hover {
+        background-color: #f44336;
+        color: white; }
+  header .link_Bn_right {
+    width: 25%;
+    background: #886532; }
+
 blockquote,
 body,
 dd,
@@ -47,3 +83,15 @@ body {
 
 .input_text {
   color: #ff0; }
+
+nav {
+  background-color: #FFECC9;
+  width: 150px;
+  height: 700px;
+  text-align: center;
+  line-height: 400px;
+  float: left; }
+  nav .quota_block {
+    background: #1e68a7; }
+    nav .quota_block span {
+      font-size: 6px; }

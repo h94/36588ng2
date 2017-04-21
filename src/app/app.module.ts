@@ -15,7 +15,11 @@ import { HeaderComponent } from './_header/header.component';
 import { NavComponent } from './_nav/nav.component';
 import { GameTableComponent } from './game_table/game-table.component';
 import { LoginComponent } from './_login/login.component';
-
+import { BetDetailComponent } from './bet_detail/bet-detail.component';
+import { BetHistoryComponent } from './bet_history/bet-history.component'
+import { BetHistoryDetailComponent } from './bet_history/bet_history_detail/bet-history-detail.component';
+import { SystemRelatedComponent } from './system_related/system-related.component';
+import { MemberComponent } from'./_member/member.component';
 //Pipes
 import { classifyGameListPipe } from './app.pipes';
 
@@ -29,7 +33,8 @@ import { classifyGameListPipe } from './app.pipes';
     declarations: [
         LoginComponent,
         AppComponent, FooterComponent,
-        HeaderComponent, NavComponent, GameTableComponent
+        HeaderComponent, NavComponent, GameTableComponent,
+        BetDetailComponent,BetHistoryComponent,BetHistoryDetailComponent,SystemRelatedComponent,MemberComponent
     ],
     providers: [
         ApiService,AuthGuard, GlobalService

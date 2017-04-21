@@ -40,6 +40,9 @@ export class LoginComponent implements OnInit {
                 this.globals.setShowLogin(true);
                 location.reload();
             }
+            if(res.ret[0] == '-1'){
+                alert('帳密錯誤');
+            }
             console.log(res);
         })
 
