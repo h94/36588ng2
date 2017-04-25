@@ -22,7 +22,7 @@ const routes: Routes = [
 		component: LoginComponent
 	},
     {
-        path: 'GameTable',  
+        path: 'GameTable/:gtype',  
         component: GameTableComponent,
 		canActivate: [AuthGuard]
     },

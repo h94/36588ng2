@@ -1,10 +1,11 @@
 <nav>
     <div class="quota_block">
-        <span>帳號:</span>
-        <span>信用額度:</span>
+        <span>帳號:{{username}}</span>
+        <span>信用額度:{{maxcredit}}</span>
         <button class="btn_logout" (click)="logout()">登出</button>
 
     </div>
-    nav
-
+    <div class="nav_type" *ngFor="let list of navgtype | keys">
+        <a [routerLink]="['/GameTable', list.key]">{{list.key + '-'+list.value.ALL}}</a>
+    </div>
 </nav>

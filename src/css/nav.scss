@@ -6,9 +6,16 @@ nav {
     line-height: 400px;
     float: left;
     .quota_block {
+        height: 80px;
         background: #1e68a7;
+        display: grid;
         span {
+            line-height: 22px;
             font-size: 6px;
         }
+    }
+    .nav_type {
+        line-height: 22px;
+        cursor: pointer;
     }
 }

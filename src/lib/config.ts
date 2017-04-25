@@ -7,4 +7,4 @@ declare var url: {
     lang: string,
     defaultBallType: string
 };
-export const host = url;
+export const SharedData = url;

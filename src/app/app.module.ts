@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
 //Service
-import { ApiService,AuthGuard, GlobalService } from 'service';
+import { ApiService, AuthGuard, GlobalService } from 'service';
 //Common Component
 import { AppComponent } from './app.component';
 import { FooterComponent } from './_footer/footer.component';
@@ -19,25 +19,33 @@ import { BetDetailComponent } from './bet_detail/bet-detail.component';
 import { BetHistoryComponent } from './bet_history/bet-history.component'
 import { BetHistoryDetailComponent } from './bet_history/bet_history_detail/bet-history-detail.component';
 import { SystemRelatedComponent } from './system_related/system-related.component';
-import { MemberComponent } from'./_member/member.component';
+import { MemberComponent } from './_member/member.component';
 //Pipes
-import { classifyGameListPipe } from './app.pipes';
+import { KeysPipe } from './app.pipes';
 
 @NgModule({
     imports: [
-        BrowserModule, HttpModule, AppRoutingModule, BrowserAnimationsModule ,FormsModule
+        BrowserModule, HttpModule, AppRoutingModule, BrowserAnimationsModule, FormsModule
     ],
     bootstrap: [
         AppComponent
     ],
     declarations: [
         LoginComponent,
-        AppComponent, FooterComponent,
-        HeaderComponent, NavComponent, GameTableComponent,
-        BetDetailComponent,BetHistoryComponent,BetHistoryDetailComponent,SystemRelatedComponent,MemberComponent
+        AppComponent,
+        FooterComponent,
+        HeaderComponent,
+        NavComponent,
+        GameTableComponent,
+        BetDetailComponent,
+        BetHistoryComponent, 
+        BetHistoryDetailComponent, 
+        SystemRelatedComponent, 
+        MemberComponent,
+        KeysPipe
     ],
     providers: [
-        ApiService,AuthGuard, GlobalService
+        ApiService, AuthGuard, GlobalService
     ],
 })
-export class AppModule {}
+export class AppModule { }

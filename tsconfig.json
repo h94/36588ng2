@@ -12,15 +12,15 @@
         "typeRoots": [
             "node_modules/@types"
         ],
-		"baseUrl": "./src",
-		"paths": {
-			"lib/*": [
-				"./lib/*"
-			],
-			"service/*": [
-				"./service/*"
-			]
-		}
+        "baseUrl": "./src",
+        "paths": {
+            "lib/*": [
+                "./lib/*"
+            ],
+            "service/*": [
+                "./service/*"
+            ]
+        }
     },
     "exclude": [
         "node_modules",

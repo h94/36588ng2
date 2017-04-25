@@ -7,7 +7,6 @@ export class AuthGuard implements CanActivate {
 	constructor(private router: Router, private globals: GlobalService) { }
 
 	canActivate() {
-		console.log(sessionStorage.getItem('uid'));
 
 		if (sessionStorage.getItem('uid')) {
 			return true;

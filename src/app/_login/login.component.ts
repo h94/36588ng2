@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService, ApiService } from 'service';
 import { Router } from '@angular/router';
+
+import { SharedData } from 'lib/config';
 @Component({
     selector: 'login',
     templateUrl: 'login.component.html'
@@ -20,6 +22,8 @@ export class LoginComponent implements OnInit {
 	 */
     public password: string = '';
     public isRemember: boolean = false;
+    /**預設球隊 */
+    private gtype : string = SharedData.defaultBallType;
 
     constructor(private globals: GlobalService, private api: ApiService,private router: Router) { }
 
@@ -49,7 +53,7 @@ export class LoginComponent implements OnInit {
     }
      ngOnInit() {
         if(sessionStorage.getItem('uid')){
-            this.router.navigate(['GameTable']);
+            this.router.navigate(['GameTable/'+this.gtype]);
         }
         if (localStorage.getItem('username') && localStorage.getItem('password')) {
             this.username=localStorage.getItem('username');

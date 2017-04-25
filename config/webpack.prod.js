@@ -27,17 +27,17 @@ module.exports = webpackMerge(commonConfig, {
             minimize: true,
             debug: false
         }, {
-                test: /\.html$/,
-                minimize: true,
-                removeAttributeQuotes: false,
-                caseSensitive: true,
-                customAttrSurround: [
-                    [/#/, /(?:)/],
-                    [/\*/, /(?:)/],
-                    [/\[?\(?/, /(?:)/]
-                ],
-                customAttrAssign: [/\)?\]?=/]
-            }),
+            test: /\.html$/,
+            minimize: true,
+            removeAttributeQuotes: false,
+            caseSensitive: true,
+            customAttrSurround: [
+                [/#/, /(?:)/],
+                [/\*/, /(?:)/],
+                [/\[?\(?/, /(?:)/]
+            ],
+            customAttrAssign: [/\)?\]?=/]
+        }),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
             beautify: false,
@@ -57,6 +57,10 @@ module.exports = webpackMerge(commonConfig, {
                 'ENV': JSON.stringify(ENV)
             }
         }),
+        new webpack.ContextReplacementPlugin(
+            /angular(\\|\/)core(\\|\/)@angular/,
+            path.resolve(__dirname, '../src')
+        )
 
     ]
 });

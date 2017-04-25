@@ -5,7 +5,7 @@ import { Http, Headers, RequestOptions } from '@angular/http';
 //Other Liberiary
 import { Observable } from 'rxjs';
 //config.js
-import { host } from 'lib/config';
+import { SharedData } from 'lib/config';
 //Interface
 import { APIResponse } from 'lib/IResponse';
 
@@ -23,7 +23,7 @@ export class ApiService {
 	 * @param _data request參數
 	 */
 	postServer(_code: number, _data: any): Observable<APIResponse> {
-		let url = host.gateway;
+		let url = SharedData.gateway;
 		let body = this.formatPostBody({
 			cmd: JSON.stringify({
 				cmd: _code,
